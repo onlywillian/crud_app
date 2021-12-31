@@ -4,7 +4,7 @@
   "description": "A simple CRUD app",
   "main": "index.js",
   "scripts": {
-    "start": "index.js"
+    "start": "node index.js"
   },
   "keywords": [
     "CRUD",
@@ -13,6 +13,7 @@
   "author": "Willian",
   "license": "ISC",
   "dependencies": {
+    "express": "^4.17.2",
     "mongoose": "^6.1.3"
   }
 }
