@@ -1,0 +1,14 @@
+header {
+    display: flex;
+    padding: 10px 20px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .new-user-button {
+    background: var(--primary-color);
+    border-radius: 8px;
+    padding: 10px;
+    color: var(--font-color);
+    cursor: pointer;
+}

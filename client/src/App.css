@@ -1,0 +1,13 @@
+:root {
+    --back-color: #EAF6FF;
+    --font-color: #232528;
+    --primary-color: #FFA400;
+    --second-color: #747C92;
+    --red-color: #FF6663;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
