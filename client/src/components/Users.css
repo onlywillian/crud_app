@@ -1,0 +1,24 @@
+.users {
+    margin-top: 20px;
+    width: 100%;
+    display: flex;
+    min-height: 200px;
+}
+
+.users table {
+    width: 90%;
+    height: 100%;
+}
+
+.users .fields {
+    color: var(--second-color);
+}
+
+.users tr {
+    margin-top: 15px;
+}
+
+.users tr td {
+    width: 16%;
+    padding: 10px 0;
+}

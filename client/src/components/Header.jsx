@@ -1,4 +1,5 @@
 import React from 'react';
+import { BiPlusCircle } from 'react-icons/bi';
 
 import './Header.css';
 
@@ -11,8 +12,8 @@ const Header = () => {
             </div>
 
             <div className="new-user-button">
-                <i className="icon"></i>
-                <p>Invite User</p>
+                <BiPlusCircle />
+                <p>New User</p>
             </div>
         </header>
      );

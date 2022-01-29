@@ -11,4 +11,8 @@ header .new-user-button {
     padding: 10px;
     color: var(--font-color);
     cursor: pointer;
+    display: flex;
+    align-items: center;
+    width: 100px;
+    justify-content: space-between;
 }
