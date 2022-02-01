@@ -1,44 +1,26 @@
-import React, { useState } from 'react';
-import { BiCaretDown } from 'react-icons/bi';
+import React, { useEffect, useState } from 'react';
+// import { BiCaretDown } from 'react-icons/bi';
+import axios from 'axios';
 
 import './Users.css';
+import User from './User';
 
 const Users = () => {
-    const [users, setUsers] = useState([
-        {
-            id: 89765415378,
-            name: 'Willian',
-            lastName: 'Andrade',
-            email: 'example@gmail.com',
-            password: 'example123',
-            createdAt: '28 01 2022 : 10 15 AM',
-        }
-    ]);
-
+    const [data, setData] = useState([]);
+    
+    useEffect(async () => {
+        const newUsers = await axios.get('http://localhost:3333/database/users/all');
+        
+        setData(newUsers.data.users);
+    }, []);
+    
     return ( 
-        <div className="users center">
-            <table>
-                <tr className='fields'>
-                    <td>ID <BiCaretDown /></td>
-                    <td>Name <BiCaretDown /></td>
-                    <td>lastName <BiCaretDown /></td>
-                    <td>Email <BiCaretDown /></td>
-                    <td>Password <BiCaretDown /></td>
-                    <td>CreatedAt <BiCaretDown /></td>
-                </tr>
-                {
-                    users.map(user => (
-                        <tr>
-                            <td>{user.id}</td>
-                            <td>{user.name}</td>
-                            <td>{user.lastName}</td>
-                            <td>{user.email}</td>
-                            <td>{user.password}</td>
-                            <td>{user.createdAt}</td>
-                        </tr>
-                    ))
-                }
-            </table>
+        <div className='users'>
+            <div className="fields">
+                {data.map(user => (
+                    <User name={user.name}/>
+                ))}
+            </div>
         </div>
      );
 }
