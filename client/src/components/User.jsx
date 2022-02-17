@@ -1,9 +1,15 @@
 import React from 'react';
 
-const User = ({name}) => {
+import './User.css';
+
+const User = ({id, name, email, password, createdAt}) => {
     return ( 
-        <div>
-           {name}
+        <div className='user'>
+           <div className="id">{id}</div>
+           <div className="name">{name}</div>
+           <div className="email">{email}</div>
+           <div className="pass">{password}</div>
+           <div className="created-at">{createdAt}</div>
         </div>
      );
 }

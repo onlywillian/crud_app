@@ -18,7 +18,8 @@ const Users = () => {
         <div className='users'>
             <div className="fields">
                 {data.map(user => (
-                    <User name={user.name}/>
+                    <User id={user._id} name={user.name} email={user.email}
+                        password={user.password} createdAt={user.createdAt}/>
                 ))}
             </div>
         </div>

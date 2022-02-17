@@ -1,0 +1,8 @@
+.user {
+    display: flex;
+    width: 100%;
+}
+.user div {
+    border: 1px solid rgb(136, 136, 136);
+    padding: 10px;
+}
